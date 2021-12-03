@@ -11,11 +11,12 @@
 
 <body>
     <nav id="navbar">
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
+        <header id="nav-header">Service Quick Links</header>
+        <a class="nav-link" href="#Elastic_Compute_Cloud">Elastic Compute Cloud</a><br>
+        <a class="nav-link" href="#Relational_Database_Service">Relational Database Service</a><br>
+        <a class="nav-link" href="#CloudFront">CloudFront</a><br>
+        <a class="nav-link" href="#Simple_Storage_Service">Simple Storage Service</a><br>
+        <a class="nav-link" href="#Lambda">Lambda</a><br>
     </nav>
 
     <main id="main-doc">
@@ -50,8 +51,10 @@
             </div>
             <div>
                 <p><b>Launch an Instance</b></p>
-                <code>aws ec2 run-instances --image-id ami-xxxxxxxx --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-903004f8 --subnet-id subnet-6e7f829e</code>
-            </div>
+                <div class="code-block">
+                    <code>aws ec2 run-instances --image-id ami-xxxxxxxx --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-903004f8 --subnet-id subnet-6e7f829e</code>
+                </div>
+            </div><br>
         </section><br>
 
         <!--RDS Section-->
@@ -67,7 +70,7 @@
                 <li>MariaDB</li>
                 <li>Oracle</li>
                 <li>SQL Server</li>
-            </ul>
+            </ul><br>
         </section><br>
 
         <!--CloudFront Section-->
@@ -93,7 +96,7 @@
                     mollitia tempore veniam doloremque quibusdam maxime.</li>
                 <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, unde corporis! Nesciunt
                     adipisci atque quidem ea perferendis eos quae possimus!</li>
-            </ul>
+            </ul><br>
         </section><br>
 
         <!--S3 Section-->
@@ -103,18 +106,20 @@
                 <header>Simple Storage Service</header>
             </div>
             <p><b>Random CLI commands</b></p>
-            <code>--exclude "*" --include "*.txt"</code>
-            <code>--include "*.txt" --exclude "*"</code>
-            <code>/tmp/foo/.git/* -> /tmp/foo/.git/config       (matches, should exclude)
+            <div class="code-block">
+                <code>--exclude "*" --include "*.txt"</code>
+                <code>--include "*.txt" --exclude "*"</code>
+                <code>/tmp/foo/.git/* -> /tmp/foo/.git/config       (matches, should exclude)
                 /tmp/foo/.git/* -> /tmp/foo/.git/description  (matches, should exclude)
                 /tmp/foo/.git/* -> /tmp/foo/foo.txt  (does not match, should include)
                 /tmp/foo/.git/* -> /tmp/foo/bar.txt  (does not match, should include)
                 /tmp/foo/.git/* -> /tmp/foo/baz.jpg  (does not match, should include)</code>
-            <code>aws s3 cp /tmp/foo/ s3://bucket/ --recursive \
+                <code>aws s3 cp /tmp/foo/ s3://bucket/ --recursive \
                     --exclude "*" --include "*.jpg" --include "*.txt"</code>
+            </div><br>
         </section><br>
 
-        <!--Config Section-->
+        <!--Lambda Section-->
         <section class="main-section" id="Lambda">
             <div class="section-title">
                 <img class="service-logo" src="Lambda.png" alt="Lambda Logo">
@@ -129,7 +134,7 @@
             <p>Best service ever</p>
             <p>Best service ever</p>
             <p>Best service ever</p>
-        </section>
+        </section><br>
     </main>
 </body>
 
