@@ -10,7 +10,127 @@
 </head>
 
 <body>
+    <nav id="navbar">
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+    </nav>
 
+    <main id="main-doc">
+        <h1>My Favourite AWS Services</h1>
+
+        <!--EC2 Section-->
+        <section class="main-section" id="Elastic_Compute_Cloud">
+            <div class="section-title">
+                <img class="service-logo" src="EC2.png" alt="EC2 Logo">
+                <header>Elastic Compute Cloud</header>
+            </div>
+            <div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias est nesciunt quae ad earum
+                    quibusdam excepturi laboriosam ea maiores dolorem? Iste ut sequi velit maxime, expedita qui
+                    molestiae vitae amet, quo quod voluptatem illum eveniet numquam itaque, rem suscipit quaerat fugit
+                    explicabo! Dicta, facere libero nisi quas voluptatem, praesentium laboriosam ad repudiandae
+                    obcaecati consectetur esse voluptatum eaque. Nemo error harum tempora, corporis temporibus
+                    voluptatem laboriosam perspiciatis esse adipisci rerum possimus exercitationem praesentium cum,
+                    eveniet, nisi provident doloremque deserunt sequi eius ea assumenda a officiis pariatur. Mollitia
+                    accusamus porro at, fuga ea rem adipisci omnis voluptatibus laborum eveniet earum explicabo ratione
+                    quod suscipit non perferendis, eligendi asperiores error. Eaque perspiciatis consequatur, aperiam ex
+                    quidem magni maiores at aspernatur nisi dolores! Excepturi adipisci suscipit reiciendis aperiam
+                    nesciunt facilis, recusandae magna.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus et quod dicta saepe consequatur,
+                    cupiditate atque nisi quo possimus dolores incidunt unde vel. Dolorum blanditiis inventore dolorem
+                    officiis, possimus cumque, eum repellendus consequatur, natus quibusdam fugit rem doloribus harum
+                    incidunt qui odit eligendi suscipit nesciunt illum velit accusamus nisi architecto. Fugit vitae quae
+                    at ipsa voluptatem, fuga sunt sint reiciendis deserunt reprehenderit, dignissimos suscipit molestiae
+                    ullam soluta debitis voluptate nobis odio deleniti, ratione pariatur asperiores sed est similique.
+                    Laborum amet ea non atque velit quod at, eligendi fugiat suscipit earum magnam nulla esse eum ullam
+                    accusamus hic explicabo vero consequatur.</p>
+            </div>
+            <div>
+                <p><b>Launch an Instance</b></p>
+                <code>aws ec2 run-instances --image-id ami-xxxxxxxx --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-903004f8 --subnet-id subnet-6e7f829e</code>
+            </div>
+        </section><br>
+
+        <!--RDS Section-->
+        <section class="main-section" id="Relational_Database_Service">
+            <div class="section-title">
+                <img class="service-logo" src="RDS.png" alt="RDS Logo">
+                <header>Relational Database Service</header>
+            </div>
+            <p>Supported Engines</p>
+            <ul>
+                <li>PostgreSQL</li>
+                <li>MySQL</li>
+                <li>MariaDB</li>
+                <li>Oracle</li>
+                <li>SQL Server</li>
+            </ul>
+        </section><br>
+
+        <!--CloudFront Section-->
+        <section class="main-section" id="CloudFront">
+            <div class="section-title">
+                <img class="service-logo" src="CloudFront.png" alt="CloudFront Logo">
+                <header>CloudFront</header>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident omnis aut esse quisquam sed
+                consectetur rem ullam minima numquam maxime. Iste delectus dicta reprehenderit sapiente ea vel, sint cum
+                voluptas rerum velit ipsa fugiat vero cupiditate eaque, nisi amet, tenetur fuga numquam atque hic odit!
+                Asperiores repellendus facilis at aliquid facere ipsam sint repellat itaque repudiandae dolores unde
+                necessitatibus expedita iure dicta debitis est quas cum quae in, architecto eveniet? Eligendi pariatur
+                debitis ad, recusandae, autem sed eos nostrum consequatur non veniam quis assumenda sapiente. Soluta ab,
+                quisquam alias laudantium ipsum, nobis eligendi, quis veniam suscipit qui accusamus assumenda numquam?
+            </p>
+            <ul>
+                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla incidunt dolorem quibusdam quis.
+                    Minus repellendus blanditiis laudantium fuga aperiam voluptatum illum doloremque beatae dicta? Vel
+                    consequuntur ullam dolores sequi esse fugit fugiat modi perferendis, illo aut dicta dolor tempora
+                    vitae, iste excepturi. Voluptatum amet iure rem tempore facere aperiam et.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex obcaecati veritatis odio error quos
+                    mollitia tempore veniam doloremque quibusdam maxime.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, unde corporis! Nesciunt
+                    adipisci atque quidem ea perferendis eos quae possimus!</li>
+            </ul>
+        </section><br>
+
+        <!--S3 Section-->
+        <section class="main-section" id="Simple_Storage_Service">
+            <div class="section-title">
+                <img class="service-logo" src="S3.png" alt="S3 Logo">
+                <header>Simple Storage Service</header>
+            </div>
+            <p><b>Random CLI commands</b></p>
+            <code>--exclude "*" --include "*.txt"</code>
+            <code>--include "*.txt" --exclude "*"</code>
+            <code>/tmp/foo/.git/* -> /tmp/foo/.git/config       (matches, should exclude)
+                /tmp/foo/.git/* -> /tmp/foo/.git/description  (matches, should exclude)
+                /tmp/foo/.git/* -> /tmp/foo/foo.txt  (does not match, should include)
+                /tmp/foo/.git/* -> /tmp/foo/bar.txt  (does not match, should include)
+                /tmp/foo/.git/* -> /tmp/foo/baz.jpg  (does not match, should include)</code>
+            <code>aws s3 cp /tmp/foo/ s3://bucket/ --recursive \
+                    --exclude "*" --include "*.jpg" --include "*.txt"</code>
+        </section><br>
+
+        <!--Config Section-->
+        <section class="main-section" id="Lambda">
+            <div class="section-title">
+                <img class="service-logo" src="Lambda.png" alt="Lambda Logo">
+                <header>Lambda</header>
+            </div>
+            <p>Best service ever</p>
+            <p>Best service ever</p>
+            <p>Best service ever</p>
+            <p>Best service ever</p>
+            <p>Best service ever</p>
+            <p>Best service ever</p>
+            <p>Best service ever</p>
+            <p>Best service ever</p>
+            <p>Best service ever</p>
+        </section>
+    </main>
 </body>
 
 </html>

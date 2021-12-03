@@ -1,0 +1,31 @@
+#navbar {
+    height: 100%; /* full height of the display */
+    width: 160px; /* fixed width */
+    position: fixed; /* stay in place on scroll */
+    z-index: 1; /* stay on top */
+    top: 0; /* stay at the top */
+    background-color: cornsilk;
+    overflow: hidden; /* Disable horizontal scrolling */
+    padding-top: 20px;
+}
+
+#main-doc {
+    margin-left: 160px; /* this has to match up with the width of the side nav */
+    padding: 0px 20px;
+}
+
+.section-title {
+    display: flex;
+}
+
+.service-logo {
+    width: 50px;
+    height: 50px;
+    padding-right: 15px;
+}
+
+header {
+    font-size: 40px;
+    font-weight: 300;
+    padding-bottom: 10px;
+}
